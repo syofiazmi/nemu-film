@@ -1,6 +1,6 @@
 import dateFormat from 'dateformat';
 
-function main() {
+const main = () => {
 
     const baseURL = "https://api.themoviedb.org/3/movie";
     const basePosterURL = "https://image.tmdb.org/t/p/original";
@@ -21,11 +21,6 @@ function main() {
                 showResponseMessage(error);
             });
     };
-
-    getMovie();
-
-    console.log(basePosterURL)
-
 
     const renderAllMovies = (movies) => {
         const listMovieElement = document.querySelector('#listmovie');
@@ -51,6 +46,10 @@ function main() {
     const showResponseMessage = (message = 'Check your internet connection') => {
         alert(message);
     }
+
+    getMovie();
 }
+
+
 
 export default main;
